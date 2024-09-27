@@ -50,7 +50,7 @@ class Program
 
 		Utils.Permute(numbers, 0, K, ref count);
 
-		// Write output
-		File.WriteAllText("OUTPUT.TXT", count.ToString());
+        Console.WriteLine("Now check the output file, there's an answer!");
+        File.WriteAllText("OUTPUT.TXT", count.ToString());
 	}
 }
