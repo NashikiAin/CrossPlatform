@@ -6,7 +6,7 @@ class Program
 {
 	static void Main()
 	{
-		string inputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\input.txt");
+		string inputFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..", @"..", @"..", "input.txt");
 
 		// Check if the input file exists
 		if (!File.Exists(inputFilePath))
