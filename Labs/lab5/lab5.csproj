@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lab5.Tests\lab5.Tests.csproj" />
     <ProjectReference Include="..\LabsLibrary\LabsLibrary.csproj" />
   </ItemGroup>
 
