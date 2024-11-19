@@ -7,11 +7,12 @@
     <Nullable>enable</Nullable>
 	  <PackAsTool>true</PackAsTool>
 	  <OutputType>Exe</OutputType>
-	  <Version>1.0.2</Version>
+	  <Version>1.0.0</Version>
 	  <Authors>OlehSymaka</Authors>
-	  <Description>BaGet</Description>
+	  <Description>lab4</Description>
 	  <ToolCommandName>lab4</ToolCommandName>
 	  <PackageId>OSymakalab4</PackageId>
+	  <PackageOutputPath>./nupkgs</PackageOutputPath>
   </PropertyGroup>
 
 
