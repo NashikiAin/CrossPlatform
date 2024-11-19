@@ -1,0 +1,81 @@
+﻿@model lab5.Models.FindShortPathViewModel
+
+@{
+    ViewData["Title"] = "Find Short Path";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="FindShortPath" method="post">
+        <div class="form-group">
+            <label asp-for="K" class="control-label"></label>
+            <input asp-for="K" class="form-control" />
+            <span asp-validation-for="K" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="N" class="control-label"></label>
+            <input asp-for="N" class="form-control" />
+            <span asp-validation-for="N" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="M" class="control-label"></label>
+            <input asp-for="M" class="form-control" />
+            <span asp-validation-for="M" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="MazeString" class="control-label">maze</label>
+            <textarea asp-for="MazeString"
+                      class="form-control"
+                      rows="5"
+                      placeholder="Приклад:
+2 0 0 1 1
+0 1 0 0 1
+1 1 0 0 1
+0 0 0 0 1
+3 1 0 0 1
+(Числа розділені пробілами)">
+    </textarea>
+            <span asp-validation-for="MazeString" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Start Point (X, Y)</label>
+            <div class="d-flex">
+                <input asp-for="StartX" class="form-control mr-2" placeholder="X" />
+                <input asp-for="StartY" class="form-control" placeholder="Y" />
+            </div>
+            <span asp-validation-for="StartX" class="text-danger"></span>
+            <span asp-validation-for="StartY" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">End Point (X, Y)</label>
+            <div class="d-flex">
+                <input asp-for="EndX" class="form-control mr-2" placeholder="X" />
+                <input asp-for="EndY" class="form-control" placeholder="Y" />
+            </div>
+            <span asp-validation-for="EndX" class="text-danger"></span>
+            <span asp-validation-for="EndY" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Знайти шлях</button>
+        </div>
+    </form>
+
+    @if (Model.ShortestPathDistance.HasValue)
+    {
+        <h3>Найкоротша відстань: @Model.ShortestPathDistance</h3>
+    }
+    
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

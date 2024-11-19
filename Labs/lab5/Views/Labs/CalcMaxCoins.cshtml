@@ -1,0 +1,53 @@
+﻿@model lab5.Models.CalcMaxCoinsViewModel
+
+@{
+    ViewData["Title"] = "Calculate Max Coins";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="CalcMaxCoins" method="post">
+        <div class="form-group">
+            <label asp-for="N" class="control-label"></label>
+            <input asp-for="N" class="form-control" />
+            <span asp-validation-for="N" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CoinsString" class="control-label"></label>
+            <div>
+                <input type="text" class="form-control" asp-for="CoinsString" placeholder="Введіть монети для кожної стопки (наприклад: 5,10,15)" />
+            </div>
+            <span asp-validation-for="CoinsString" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="K" class="control-label"></label>
+            <input asp-for="K" class="form-control" />
+            <span asp-validation-for="K" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Обчислити</button>
+        </div>
+    </form>
+
+    @if (Model.MaxCoins.HasValue)
+    {
+        <h3>Максимальна кількість монет: @Model.MaxCoins</h3>
+    }
+
+    @if (ViewData["InvalidInput"] != null)
+    {
+        <div class="alert alert-danger">
+            @ViewData["InvalidInput"]
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
