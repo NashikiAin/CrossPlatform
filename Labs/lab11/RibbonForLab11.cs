@@ -66,8 +66,9 @@ namespace lab11
 
         private string GetInputFilePath(string labName)
         {
-            string basePath = @"C:\Users\Oleh\Desktop\CrossPlatform";
-            string labFolderPath = Path.Combine(basePath, "Labs", labName);
+            string basePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "CrossPlatform", "Labs");
+
+            string labFolderPath = Path.Combine(basePath, labName);
 
             Console.WriteLine($"Шлях: {labFolderPath}");
 
