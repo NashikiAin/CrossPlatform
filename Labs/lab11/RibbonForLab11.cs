@@ -53,10 +53,10 @@ namespace lab11
                         result = labRunner.RunLab3(filePath);
                         break;
                     default:
-                        throw new ArgumentException("Лабораторная работа не найдена.");
+                        throw new ArgumentException("Лаба не знайдена.");
                 }
 
-                MessageBox.Show("Ответ: " + result);
+                MessageBox.Show("Відповідь: " + result);
             }
             catch (Exception ex)
             {
