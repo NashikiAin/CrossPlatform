@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3", "lab3.csproj", "{051
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3.Tests", "..\lab3.Tests\lab3.Tests.csproj", "{F6B8332C-5D2C-40BB-BE16-C02BDEC362BC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindShortPathLibrary", "..\FindShortPathLibrary\FindShortPathLibrary.csproj", "{C99957C8-B1FD-464D-8321-E6B486555CAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F6B8332C-5D2C-40BB-BE16-C02BDEC362BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B8332C-5D2C-40BB-BE16-C02BDEC362BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B8332C-5D2C-40BB-BE16-C02BDEC362BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99957C8-B1FD-464D-8321-E6B486555CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99957C8-B1FD-464D-8321-E6B486555CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99957C8-B1FD-464D-8321-E6B486555CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99957C8-B1FD-464D-8321-E6B486555CAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

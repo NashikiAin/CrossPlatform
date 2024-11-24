@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using lab3;
+﻿using FindShortPathLibrary;
+
 class Program
 {
 	static readonly int[] dx = { 0, 1, 0, -1 }; // Смещения по x для направлений: вверх, вправо, вниз, влево
