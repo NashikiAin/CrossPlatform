@@ -1,6 +1,4 @@
-// CalcMaxCoins.ts
 export class CalcMaxCoins {
-    // Function to calculate the maximum number of coins for the first player
     static calculateMaxCoins(coins: number[], sum: number[], N: number, K: number): number {
       const dp: number[][] = Array.from({ length: N + 1 }, () => new Array(K + 1).fill(0));
   
