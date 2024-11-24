@@ -69,13 +69,12 @@ namespace lab11
             string basePath = @"C:\Users\Oleh\Desktop\CrossPlatform";
             string labFolderPath = Path.Combine(basePath, "Labs", labName);
 
-            // Отладочная информация
-            Console.WriteLine($"Путь к лаборатории: {labFolderPath}");
+            Console.WriteLine($"Шлях: {labFolderPath}");
 
             if (Directory.Exists(labFolderPath))
             {
                 string filePath = Path.Combine(labFolderPath, "input.txt");
-                Console.WriteLine($"Проверка файла: {filePath}");
+                Console.WriteLine($"Перевірка файлу: {filePath}");
 
                 if (File.Exists(filePath))
                 {
@@ -83,7 +82,7 @@ namespace lab11
                 }
                 else
                 {
-                    throw new FileNotFoundException($"Файл {filePath} не найден.");
+                    throw new FileNotFoundException($"Файл {filePath} не знайдений.");
                 }
             }
 
